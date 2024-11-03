@@ -1,0 +1,67 @@
+using System;
+using System.Windows.Forms;
+using System.Drawing;
+
+namespace ControlTesting
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+            // Create controls dynamically
+            MessageBox.Show("This is a message box.");
+
+            Label label = new Label();
+            label.Text = "This is a label.";
+            label.Location = new Point(10, 30);
+            Controls.Add(label);
+
+            TextBox textBox = new TextBox();
+            textBox.Location = new Point(10, 60);
+            Controls.Add(textBox);
+
+            RichTextBox richTextBox = new RichTextBox();
+            richTextBox.Location = new Point(10, 90);
+            Controls.Add(richTextBox);
+
+            CheckBox checkBox = new CheckBox();
+            checkBox.Text = "Check me";
+            checkBox.Location = new Point(10, 120);
+            Controls.Add(checkBox);
+
+            RadioButton radioButton1 = new RadioButton();
+            radioButton1.Text = "Option 1";
+            radioButton1.Location = new Point(10, 150);
+            Controls.Add(radioButton1);
+
+            RadioButton radioButton2 = new RadioButton();
+            radioButton2.Text = "Option 2";
+            radioButton2.Location = new Point(10, 180);
+            Controls.Add(radioButton2);
+
+            ComboBox comboBox = new ComboBox();
+            comboBox.Items.AddRange(new object[] { "Item 1", "Item 2", "Item 3" });
+            comboBox.Location = new Point(10, 210);
+            Controls.Add(comboBox);
+
+            NumericUpDown numericUpDown = new NumericUpDown();
+            numericUpDown.Location = new Point(10, 240);
+            Controls.Add(numericUpDown);
+
+            DateTimePicker dateTimePicker = new DateTimePicker();
+            dateTimePicker.Location = new Point(10, 270);
+            Controls.Add(dateTimePicker);
+
+            MonthCalendar monthCalendar = new MonthCalendar();
+            monthCalendar.Location = new Point(200, 10);
+            Controls.Add(monthCalendar);
+
+            PictureBox pictureBox = new PictureBox();
+            pictureBox.Image = Image.FromFile("your_image.jpg"); // Replace with your image path
+            pictureBox.Location = new Point(200, 200);
+            Controls.Add(pictureBox);
+        }
+    }
+}
